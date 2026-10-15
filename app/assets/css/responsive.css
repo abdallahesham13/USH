@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+
+  /* START:: BUTTONS */
+  .core-button {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  body .custom-slider.services-slider .swiper-slide {
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  body .reservation-section::before {
+    display: none;
+  }
+
+  .feature-card .big-card {
+    opacity: 1;
+  }
+
+  .custom-slider-services .swiper-slide.hovered-slide {
+    flex: 0 0 100% !important;
+
+  }
+
+  .service-row-card.services-active {
+    width: 100% !important;
+  }
+
+  .service-row-card {
+    width: 100% !important;
+  }
+
+  .service-row-card .small_card {
+    height: 40px !important;
+  }
+
+  .service-row-card .small_card h3 {
+    writing-mode: horizontal-tb !important;
+  }
+
+  body .arrows-bg::before,
+  body .arrows-bg::after {
+    width: 130px;
+    height: 160px;
+  }
+}

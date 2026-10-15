@@ -1,0 +1,218 @@
+{
+  "app": {
+    "title": "USH",
+    "sub_title": "USH",
+    "description": "نصمم وننفذ مغاسل رخام طبيعي وصناعي للمنازل والفلل والفنادق والمشاريع، من الاستشارة واختيار الخامة حتى التركيب والمتابعة. نرتب معك الاختيارات بهدوء، حتى تصبح كل تفصيلة جزءًا طبيعيًا من المكان.",
+    "dir": "rtl"
+  },
+  "common": {
+    "testimonials": "التقييمات",
+    "branches": "الفروع",
+    "faqs": "الأسئلة",
+    "all": "الكل",
+    "services": "Services"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "about_us": "من نحن",
+    "gallery": "أعمالنا",
+    "testimonials": "أراء العملاء",
+    "branches": "Branches",
+    "faqs": "الأسئلة الشائعة",
+    "contact_us": "تواصل معنا",
+    "services": "Services",
+    "doctors": "Doctors",
+    "blogs": "Articles",
+    "furniture": "Furniture"
+  },
+  "titles": {
+    "home": "الرئيسية",
+    "all_rights_reserved": "جميع الحقوق محفوظة لدي",
+    "choose_us": "عيادة سعودية تصمم وتنفذ مغاسل رخام تليق بالمكان.",
+    "feature_choose_1": "المقاس والاستخدام",
+    "feature_choose_2": "عدد الأحواض",
+    "feature_choose_3": "الخامة والتشطيب",
+    "why_vilon": "الحرفة والجودة والوضوح في تجربة واحدة.",
+    "gallery": "صور حقيقية تترك الخامة تتحدث.",
+    "testimonials": "تجارب حقيقية قبل اتخاذ القرار.",
+    "branches": "استكشف فروعنا وشوف التفاصيل علي أرض الواقع",
+    "faqs": "ما زال لديك سؤال قبل أن تبدأ؟",
+    "contact_us": "ابدأ مشروعك الآن بتواصلك معنا",
+    "our_services": "Specialist care for your needs",
+    "blogs": "Blogs"
+  },
+  "sub_titles": {
+    "choose_us": "اختيارك يبدأ هنا",
+    "why_vilon": "لماذا USH",
+    "gallery": "من أعمالنا",
+    "testimonials": "آراء العملاء",
+    "branches": "مواقع المعارض",
+    "faqs": "الأسئلة الشائعة",
+    "contact_us": "تواصل معنا",
+    "our_services": "Our services"
+  },
+  "descriptions": {
+    "feature_choose_1": "حدّد مكان المغسلة وعدد المستخدمين قبل أن تختار شكلها.",
+    "feature_choose_2": "اختر حوضًا واحدًا أو أكثر بحسب المساحة وطبيعة الاستخدام.",
+    "feature_choose_3": "اختر الرخام والتفاصيل التي تكمل طابع المكان بهدوء.",
+    "about_us": "عيادة سعودية متخصصة في تصميم وتصنيع مغاسل الرخام الطبيعي والصناعي، بخبرة تمتد منذ 2008 في خدمة المنازل والفلل والفنادق والمشاريع.",
+    "gallery": "مغاسل رخام طبيعي وصناعي بتصاميم مودرن ونيو كلاسيك، مع إمكانية تعديل المقاس والخامة والحوض والمرآة والإضاءة حسب الطلب.",
+    "testimonials": "نعرض أعمالًا تبرز تناسق الرخام، دقة الحواف، جمال المرآة، وملاءمة التصميم للمساحة.",
+    "faqs": "كل اللي تحتاج تعرفه عن خدماتنا وحلولنا، جمعناه لك هنا عشان تكون الصورة واضحة من البداية. وإذا ما لقيت إجابة سؤالك، حنا موجودين ونساعدك بكل سرور.",
+    "branches": "زوروا معارضنا في جدة والرياض لاكتشاف تصاميم مغاسل الرخام والخامات والتفاصيل عن قرب قبل اختيار التصميم المناسب."
+  },
+  "buttons": {
+    "service_details": "Service details",
+    "book_consultation": "احجز استشارتك",
+    "discover_services": "Explore our services",
+    "view_details": "عرض التفاصيل",
+    "show_all": "عرض جميع {name}",
+    "discover_more": "استكشف تصاميم أكثر",
+    "book_now": "احجز الان",
+    "book_appointment": "Book now",
+    "blog_details": "Article details"
+  },
+  "labels": {},
+  "placeholders": {
+    "choose": "اختر {field}",
+    "service": "الخدمة",
+    "name": "الاسم",
+    "phone": "رقم الجوال"
+  },
+  "errors": {
+    "required": "حقل {field} مطلوب",
+    "correct_phone": "رقم الجوال يجب أن يبدأ بـ 05 ويتكوّن من 10 أرقام"
+  },
+  "services": {
+    "section_title": "Everything you need for your look and care, all in one place.",
+    "empty": "No services are currently available.",
+    "load_error": "Unable to load services. Please try again.",
+    "intro_title": "What would you like to change or improve?"
+  },
+  "about_intro": {
+    "skin": {
+      "title": "Looking for clearer, brighter skin?",
+      "description": "Skin care and rejuvenation options to improve the appearance of pigmentation and marks, tailored to your skin’s needs."
+    },
+    "hair": {
+      "title": "Does your hair need care?",
+      "description": "From hair and scalp treatments and growth stimulation to hair transplant options in Riyadh."
+    },
+    "pigmentation": {
+      "title": "Concerned about pigmentation and marks?",
+      "description": "Treatments and techniques for pigmentation and marks that support your skin’s radiance and appearance."
+    },
+    "laser": {
+      "title": "Is laser treatment what you’re looking for?",
+      "description": "Hair removal and treatments for certain skin concerns, marks, and scars, based on your condition."
+    }
+  },
+  "consultation_process": {
+    "title": "Before any session, we find what suits you",
+    "book": "Book your consultation",
+    "steps": {
+      "consultation": {
+        "title": "Consultation",
+        "description": "We listen to you and understand what you want to improve and the results you hope to achieve."
+      },
+      "assessment": {
+        "title": "Assessment",
+        "description": "We assess your condition and identify the needs of your skin, hair, or the area to be treated."
+      },
+      "options": {
+        "title": "Options",
+        "description": "We explain the suitable options and the differences between them clearly."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "Together, we select the service or sessions best suited to your assessment."
+      },
+      "follow_up": {
+        "title": "Follow-up",
+        "description": "We stay with you through follow-up care and guidance suited to your treatment and condition."
+      }
+    }
+  },
+  "doctors_section": {
+    "title": "Our doctors",
+    "error": "Unable to load doctors. Please try again.",
+    "empty": "No doctors are currently available.",
+    "previous": "Previous doctors",
+    "next": "Next doctors",
+    "slide": "Show slide {number}"
+  },
+  "testimonials_section": {
+    "label": "Client reviews",
+    "title": "Experiences we are proud of",
+    "navigation": "Testimonials page navigation",
+    "empty": "No reviews are currently available.",
+    "previous": "Previous reviews",
+    "next": "Next reviews",
+    "slide": "Show slide {number}",
+    "rating": "Rated {value} out of 5"
+  },
+  "blogs_section": {
+    "empty": "No articles available yet.",
+    "previous": "Previous reviews",
+    "next": "Next reviews",
+    "slide": "Show slide {number}"
+  },
+  "contact_section": {
+    "title": "Unsure where to start?",
+    "description": "You don’t need to know which treatment suits you yet. Book a consultation at Vilon, and start with understanding your needs and assessing your condition.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Mobile number",
+    "specialty": "Choose a specialty",
+    "submit": "Book your consultation"
+  },
+  "static_gallery": {
+    "label": "Our work",
+    "title": "Looks that begin with an idea"
+  },
+  "location_section": {
+    "title": "In the heart of North Riyadh, closer to your beauty",
+    "description": "If you're looking for a women's salon in Al Narjis or North Riyadh, USH brings hair, color, makeup, lashes, nails, and massage services together in one place. Located in Al Narjis, we welcome clients from nearby neighborhoods including Al Arid, Al Malqa, and Al Yasmin. You can also ask about home-service availability in your area.",
+    "features": {
+      "contact": {
+        "title": "Bookings and inquiries",
+        "description": "Contact us through WhatsApp"
+      },
+      "nearby": {
+        "title": "Nearby neighborhoods",
+        "description": "Al Narjis, Al Arid, Al Malqa, Al Yasmin"
+      },
+      "services": {
+        "title": "Hair and beauty services",
+        "description": "Hair, color, makeup, lashes, nails, and massage"
+      },
+      "location": {
+        "title": "Salon location",
+        "description": "Al Narjis, North Riyadh"
+      }
+    }
+  },
+  "blog_detail": {
+    "breadcrumb": "Breadcrumb",
+    "error": "Unable to load this article. Please try again.",
+    "back": "Back to the blog"
+  },
+  "about_values": {
+    "label": "What we care about",
+    "title": "What matters in every visit",
+    "items": {
+      "taste": {
+        "title": "Your taste comes first",
+        "description": "Share your idea or inspiration with us, and let it guide us toward the right service for you."
+      },
+      "experience": {
+        "title": "Expertise in every detail",
+        "description": "Professional specialists in hair, beauty, and care, attentive to every detail of your experience."
+      },
+      "all_in_one": {
+        "title": "All your care in one place",
+        "description": "A variety of services and choices to complete every detail of your look and care at USH."
+      }
+    }
+  }
+}

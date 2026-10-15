@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'The Year of Handicrafts';
+  src: url('./TheYearofHandicrafts-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Year of Handicrafts';
+  src: url('./TheYearofHandicrafts-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Year of Handicrafts';
+  src: url('./TheYearofHandicrafts-SemiBold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Year of Handicrafts';
+  src: url('./TheYearofHandicrafts-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Year of Handicrafts';
+  src: url('./TheYearofHandicrafts-Black.otf') format('opentype');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}

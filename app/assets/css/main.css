@@ -1,0 +1,669 @@
+@import './responsive.css';
+@import './animations.css';
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+  --color-primary: #A9852E;
+  --color-primary-dark: #5D534A;
+  --color-secondary: #0F0E0E;
+  --color-primary-light: #F0E4DA;
+  --color-surface: #E8E5DF;
+  --color-success: #25D366;
+  --color-error: #FF3030;
+  --color-light: #FCFDFF;
+  --color-white: #fff;
+  --color-gray: #767676;
+  --color-secondary-gray: #737373;
+  --color-dark-gray: #4B4B4B;
+  --color-light-gray: #C6C6C6;
+  --light-filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(7500%) hue-rotate(247deg) brightness(118%) contrast(99%);
+  --primary-filter: brightness(0) saturate(100%) invert(54%) sepia(86%) saturate(362%) hue-rotate(5deg) brightness(83%) contrast(86%);
+
+
+}
+
+label {
+  @apply text-secondary font-normal text-[14px] leading-[20px];
+}
+
+section {
+  overflow: hidden;
+}
+
+.secondary-filter {
+  filter: var(--secondary-filter);
+}
+
+.primary-filter {
+  filter: var(--primary-filter);
+}
+
+.light-filter {
+  filter: var(--light-filter);
+}
+
+@layer components {
+  .container {
+    @apply px-[15px] mx-auto;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'The Year of Handicrafts', sans-serif;
+  background-color: var(--color-white);
+  @apply antialiased text-default bg-default scheme-light dark:scheme-dark;
+}
+
+.bg-gradient-main {
+  background: var(--bg-gradient-main);
+}
+
+@keyframes pulsecust {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+/* Slide animation for components */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.responsive-text {
+  @apply max-w-fit overflow-hidden text-ellipsis line-clamp-2;
+}
+
+.tab-box {
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+
+    img {
+      animation: pulsecust 1s linear infinite;
+    }
+  }
+
+  &.active {
+    transform: translateY(-4px);
+
+    img {
+      animation: pulsecust 1s linear infinite;
+    }
+  }
+
+  &.inactive {
+    background-color: white;
+    border-color: transparent;
+  }
+}
+
+/* Custom Scrollbar Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) rgba(37, 131, 251, 0.1);
+}
+
+/* Webkit Scrollbar (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(37, 131, 251, 0.1);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 131, 251, 0.8);
+}
+
+*::-webkit-scrollbar-corner {
+  background: rgba(37, 131, 251, 0.1);
+}
+
+/* Hide number input arrows */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  resize: none;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+.custom-slider {}
+
+.custom-slider .controls {}
+
+.custom-slider .controls .arrows {}
+
+.custom-slider .next-btn,
+.custom-slider .prev-btn {
+  position: relative;
+  inset: 0 !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: var(--color-primary);
+  border: none;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-slider .next-btn img,
+.custom-slider .prev-btn img {
+  filter: var(--light-filter);
+}
+
+.custom-slider .next-btn:hover,
+.custom-slider .prev-btn:hover {
+  --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+    0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow),
+    var(--tw-ring-shadow), var(--tw-shadow);
+  background-color: transparent;
+}
+
+.custom-slider .next-btn:hover img,
+.custom-slider .prev-btn:hover img {
+  filter: var(--primary-filter);
+}
+
+.custom-slider .next-btn.disabled,
+.custom-slider .prev-btn.disabled {
+  cursor: no-drop;
+  background-color: transparent !important;
+  opacity: 0.5;
+
+}
+
+.custom-slider .next-btn.disabled img,
+.custom-slider .prev-btn.disabled img {
+  filter: var(--primary-filter);
+}
+
+.custom-slider .next-btn:before {
+  display: none;
+}
+
+.custom-slider .prev-btn:before {
+  display: none;
+
+}
+
+.custom-slider .dot-btn {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  background-color: var(--color-secondary-gray);
+  cursor: pointer;
+}
+
+.custom-slider .dot-btn.btn-active {
+  background-color: var(--color-primary);
+}
+
+.custom-slider .swiper-slide {
+  transition: all 0.5s ease;
+}
+
+.custom-slider .hovered-slide {
+  flex: 0 0 45% !important;
+  z-index: 10;
+}
+
+.custom-slider-services .hovered-slide {
+  flex: 0 0 45% !important;
+  z-index: 10;
+}
+
+.custom-slider.services-slider .swiper-slide {
+  /* width: 50% !important; */
+}
+
+.custom-slider.services-slider .swiper-slide.swiper-slide-active {
+  /* transform: scale(0.8) translateX(-72%); */
+}
+
+.custom-slider.services-slider .swiper-slide.swiper-slide-next {}
+
+.custom-slider.services-slider .swiper-slide.swiper-slide-prev {
+  /* transform: scale(0.8) translateX(72%); */
+}
+
+.custom-slider.services-slider .swiper-slide-active .service-card .service-card-content p {
+  max-height: 100%;
+}
+
+.custom-slider.services-slider .swiper-slide-active {
+  transform: scale(1);
+  z-index: 10;
+}
+
+.custom-slider.services-slider .swiper-slide {
+  width: 50% !important;
+
+}
+
+.custom-slider.services-slider .swiper-slide-prev {
+  transform: scale(0.8) translateX(-50%);
+  z-index: 5;
+}
+
+.custom-slider.services-slider .swiper-slide-next {
+  transform: scale(0.8) translateX(60%);
+  z-index: 5;
+}
+
+.services-swiper .service-overlay {}
+
+.animation_up_and_down {
+  animation: animation_up_and_down 12s ease 0s infinite normal none;
+}
+
+.animation_left_and_right {
+  animation: animation_left_and_right 12s ease 0s infinite normal none;
+}
+
+.primary-overlay {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.primary-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(130, 44, 126, 0.4) 0%, rgba(130, 44, 126, 0) 100%);
+  z-index: 1;
+}
+
+/* Copy this code after the above code */
+@keyframes animation_up_and_down {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
+@keyframes animation_left_and_right {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(8px);
+  }
+
+  80% {
+    transform: translateX(6.4px);
+  }
+
+  90% {
+    transform: translateX(-6.4px);
+  }
+}
+
+@keyframes animation_right_and_left {
+
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(-8px);
+  }
+
+  80% {
+    transform: translateX(-6.4px);
+  }
+
+  90% {
+    transform: translateX(6.4px);
+  }
+}
+
+.editor-content p {
+  margin-bottom: 1rem;
+}
+
+.editor-content ul {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.editor-content ul li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+}
+
+.editor-content ul li {
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  font-family: 'The Year of Handicrafts', sans-serif;
+}
+
+.editor-content ul li::before {
+  content: '';
+  width: 25px;
+  height: 15px;
+  background-image: url('data:image/svg+xml,<svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_505_5367)"><path d="M5.6181 13.3857L9.51526 13.3749L11.1028 14.949V0.0299215L9.51957 1.60932H5.60303L6.83428 0.302269C7.03124 0.103906 7.27017 -0.00760662 7.56829 0.00204347H13.8483V15.0165L11.1178 15.0015L7.48435 14.9876C7.22281 14.9704 7.00218 14.8589 6.8289 14.6777L5.6181 13.3857Z" fill="%23B69222"/><path d="M24.3903 8.1116L19.6967 13.0546L15.7996 13.0449L21.3542 7.49399L15.8006 1.93661L19.6957 1.93018L24.414 6.89783C24.7111 7.26668 24.7175 7.73846 24.3914 8.1116H24.3903Z" fill="%23B69222"/><path d="M9.17841 13.0407L5.29092 13.0557L0.587626 8.10302C0.281965 7.74811 0.274432 7.28919 0.557491 6.91499L5.292 1.93018L9.18917 1.93661L3.63562 7.49721L9.17948 13.0407H9.17841Z" fill="%23B69222"/><path d="M7.12564 10.3408L7.12134 4.65367L9.83999 1.94092V13.046L7.12564 10.3408Z" fill="%23B69222"/><path d="M17.8676 10.3305L15.1489 13.0378V1.94238L17.8644 4.64655L17.8676 10.3305Z" fill="%23B69222"/><path d="M18.1856 0.334537L19.3727 1.60728L15.4648 1.60942L13.8687 0.00536116L17.4666 0C17.7518 0.00428893 17.9875 0.122235 18.1866 0.334537H18.1856Z" fill="%23B69222"/><path d="M18.1708 14.663C17.9803 14.8646 17.7424 14.9869 17.4658 14.9869L13.8635 14.9836L15.4586 13.3774L19.374 13.3807L18.1708 14.663Z" fill="%23B69222"/></g><defs><clipPath id="clip0_505_5367"><rect width="25" height="15" fill="white"/></clipPath></defs></svg>');
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+
+.editor-content ul li:hover span {
+  color: var(--color-primary);
+}
+
+.editor-content h1 {
+
+  @apply flex gap-2 items-center text-2xl font-bold mb-4;
+}
+
+.editor-content h2 {
+
+  @apply flex gap-2 items-center text-xl font-bold mb-4;
+}
+
+.editor-content h3 {
+
+  @apply flex gap-2 items-center text-lg font-bold mb-4;
+}
+
+.editor-content h4 {
+
+  @apply flex gap-2 items-center text-base font-bold mb-4;
+}
+
+.editor-content h5 {
+
+  @apply flex gap-2 items-center text-sm font-bold mb-4;
+}
+
+.editor-content h6 {
+
+  @apply flex gap-2 items-center text-xs font-bold mb-4;
+}
+
+
+.font-normal {
+  font-family: 'The Year of Handicrafts', sans-serif;
+  font-weight: 400;
+}
+
+.font-light {
+  font-family: 'The Year of Handicrafts', sans-serif;
+}
+
+.font-medium {
+  font-family: 'The Year of Handicrafts', sans-serif;
+  font-weight: 500;
+}
+
+.font-bold {
+  font-family: 'The Year of Handicrafts', sans-serif;
+  font-weight: 800;
+}
+
+.font-extra-bold {
+  font-family: 'The Year of Handicrafts', sans-serif;
+  font-weight: 900;
+}
+
+
+.contact-links li a .link-icon {
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0s ease-in-out;
+}
+
+.contact-links li a .link-icon img {
+  transition: all 0s ease-in-out;
+  filter: var(--primary-filter) !important;
+}
+
+.contact-links li a .link-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: all 0.3s linear;
+  opacity: 0;
+  z-index: -1;
+}
+
+.contact-links li a:hover .link-icon {
+  border: 1px solid var(--color-primary);
+}
+
+.contact-links li a:hover .link-icon img {
+  animation: fadeInRight 0.5s linear;
+  filter: var(--light-filter) !important;
+}
+
+.contact-links li a:hover .link-icon::after {
+  animation: sideClipReverse 0.5s linear;
+  opacity: 1;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes sideClipReverse {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes bg-scale-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.field-icon {
+  filter: var(--light-filter);
+}
+
+.custom-slider-testimonials .swiper-slide.swiper-slide-active {
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+
+.custom-slider-testimonials .swiper-slide.swiper-slide-prev,
+.custom-slider-testimonials .swiper-slide.swiper-slide-next {
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+.arrows-bg::before,
+.arrows-bg::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  width: 385px;
+  height: 540px;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.arrows-bg::before {
+  background-image: url("/imgs/logo/logo-arrow-right.webp");
+  right: 0;
+  animation: animation_right_and_left 12s ease 0s infinite normal none;
+}
+
+.arrows-bg::after {
+  background-image: url("/imgs/logo/logo-arrow-left.webp");
+  left: 0;
+  animation: animation_left_and_right 12s ease 0s infinite normal none;
+}
+
+.custom-accordion [data-state="open"] {
+  background-color: var(--color-primary);
+}
+
+.faqs-content * {
+  font-family: 'The Year of Handicrafts', sans-serif !important;
+  font-size: 18px !important;
+}
+
+.custom-accordion [data-state="open"] .faq-btn {
+  color: var(--color-light);
+}
+
+.custom-accordion [data-state="open"] .faqs-content * {
+  color: var(--color-light) !important;
+}
+
